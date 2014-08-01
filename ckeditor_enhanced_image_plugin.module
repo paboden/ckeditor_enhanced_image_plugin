@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Implements hook_ckeditor_plugin().
+ *
+ * @return type.
+ */
+function ckeditor_enhanced_image_plugin_ckeditor_plugin() {
+  $plugins = array();
+
+  /* Example plugin declaration, Because you can make your own too :)
+  $plugins['name-of-plugin'] = array(
+
+    // Machine name of plugin. usually the same as the folder that contains it.
+    'name' => 'name-of-plugin',
+
+    // Descrition of plugin. will display on ckeditor settings page.
+    'desc' => t('Description'),
+
+    // Set the path to the plugin folder.
+    'path' => drupal_get_path('module', 'MODULE_NAME') . '/plugins/name-of-plugin/',
+
+    // ***OPTIONAL** Declare a button for use in the wysiwyg.
+    'buttons' => array(
+
+      // For widgets, button_name may need to be capitalized.
+      'button_name' => array(
+
+        // This will show when hovering over button.
+        'label' => 'Label for plugin',
+
+        // This is usually always images/icon.png
+        'icon' => 'path/to/icon.png'
+      ),
+    )
+  );
+  */
+
+  $plugins['image2'] = array(
+    'name' => 'image2',
+    'desc' => t('Use Enhanced Image plugin'),
+    'path' => drupal_get_path('module', 'ckeditor_enhanced_image_plugin') . '/plugins/image2/',
+    'buttons' => array(),
+  );
+
+  $plugins['imageresize'] = array(
+    'name' => 'imageresize',
+    'desc' => t('Image Resize plugin'),
+    'path' => drupal_get_path('module', 'ckeditor_enhanced_image_plugin') . '/plugins/imageresize/',
+    'buttons' => array(),
+  );
+
+  return $plugins;
+}

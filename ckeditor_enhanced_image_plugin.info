@@ -1,0 +1,4 @@
+name = "CKEditor Enhanced Image Plugin"
+description = "This module enables the CKEditor Enhanced Image plugin (image2). It uses a modified version of the plugin, set up for Drupal."
+package = User interface
+core = 7.x
